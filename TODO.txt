@@ -1,0 +1,22 @@
+Current TO DO:
+Paul- Get your docs on the git. Really soon please, we waiting.
+Charlie- Continue art and don't end it all, make folders for the technical specification
+Dan- BOIDS research, start AI design for technical section
+Sam- Get shit sorted for phase 2 of report, get shit started for technical section with gaant chart and meeting logs and that (discuss first!)
+
+THINGS THAT NEED DOING:
+A "potential changes" section for the Design part of the report
+Audio and music section for the Design part of the report
+Voice acting plans? 
+Compile Design section completely, create headers and footers
+
+Technical Specification:
+It's summarised in detail in the Design Specification Blueprint on the git. Basically we need those sections done, divvy it up on monday, once charlie's made the folders.
+Technical meeting to discuss class diagram and standards for coding
+
+Get paul's project effects into the main one on the git- this is gonna have to be manually importing between projects as paul's git has been broken for too many changes now
+
+Get meeting log into submission format
+Gaant charts, planning, all listed in the Design Specification Blueprint.
+
+Nicer, more arty versions of the DUCKS and game logo need to be made

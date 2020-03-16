@@ -1,0 +1,5 @@
+Scripts or Blueprints
+
+ - AI: One or less per enemy (6-)+
+ - Enemy: (6)+
+ - Player: (1)

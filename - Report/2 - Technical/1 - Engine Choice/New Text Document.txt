@@ -1,0 +1,4 @@
+Why UE4?
+		Why not unity? Modelling, animation, blueprints, familiarity, C++ and so on
+Targetted Platform?
+		Pc, controller support, could be open to porting to a console (IN THEORY) given 			how easy building is in unreal

@@ -1,0 +1,6 @@
+<SaveLocation> = "1"
+<PlayerName> = "Sam"
+<LevelProgression> = "1"
+//This player has just started, so only one level is unlocked. This is assuming everything is unlocked in order!
+<WeaponsUnlocked> = "2"
+//They've unlocked sword and shield, again assuming that everything is unlocked in order.

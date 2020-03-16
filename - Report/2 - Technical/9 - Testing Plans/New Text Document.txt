@@ -1,0 +1,2 @@
+Testing and evaluation stragety for the finished game
+		What key points do we want to meet? We want to run at X fps, we want to be 			able to load levels of X mb size. We should have a list of tests and expected 			outcomes of weird scenarios (trying to use the hookshot while on the zipline, 			for example) should be listed here so we know to test them

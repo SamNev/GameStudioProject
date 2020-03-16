@@ -1,0 +1,2 @@
+The meeting log that I have progressively made will be polished and submitted in a folder with the report, so that cobb can look at it.
+All we need in the report is "See the meeting log contained in the submitted folder for information on our progress on this report"

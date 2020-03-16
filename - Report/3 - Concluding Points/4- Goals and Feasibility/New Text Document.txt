@@ -1,0 +1,7 @@
+	can cover Y doing Z if they fall ill.
+	Conclusions:
+		"Summarise the goal of the project"
+		Comparisons to other projects- is the scope here feasable? What might we 			NOT be able to do here? What could be designed better?
+		Assuming we get everything in this specification done with a month left. 			What's next?
+		Next steps from now! What's the plan? talk about connor maybe making a 			basic testing level, paul doing assets and animation, dan getting started on 			making cubes that will be enemies doing various shit, charlie something 			something land mines etc.
+	Sign off report, and references if we have them, then we can put this shit to rest and 	get on with making the bloody game already

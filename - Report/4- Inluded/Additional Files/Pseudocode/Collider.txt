@@ -1,0 +1,15 @@
+generateDamageColider (transform position, float radius, vec3 knockbackDirection, float damage, int timer);
+{
+	createCollider(position, radius, knockbackDirection, damage, false, true, timer);
+}
+
+
+Collider(transform _position, float _radius, vec3 _knockbackDirection, float _damage, bool _player, bool _enemy, int _timer)
+{
+	this.transform = _position;
+	this.transform.scale *= _radius;
+	knockback = _knockbackDirection;
+	hurtsPlayer = _player;
+	hurtsEnemy = _enemy;
+	damage = _damage;
+}

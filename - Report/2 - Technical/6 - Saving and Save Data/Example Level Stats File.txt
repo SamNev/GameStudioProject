@@ -1,0 +1,8 @@
+<LevelName> = "This is an example level :)"
+<LevelDescription> = "This is the flavor text for the level! Do things!"
+<LevelTime1> = "5" "30" "42" 
+//5 mins, 30 seconds, 42 ms
+<LevelName1> = "Sam"
+<LevelTime2> = "6" "50" "10"
+<LevelName2> = "Charlie"
+<LevelImagePreview> = "file/path/here.png"

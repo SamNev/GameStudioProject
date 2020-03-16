@@ -1,0 +1,16 @@
+class CameraFollowAnchor
+{
+	vector<Actor> cameraAnchors;	
+	int activeAnchorIndex = 0;
+	float speed 0.5;
+
+	void Update ()
+	{
+		lerp(transform.postion, (cameraAnchor.at(activeAnchorIndex).transform.position, speed);
+	}
+
+	void SetCameraAnchor(int _ID)
+	{
+		activeAnchorIndex = _ID;	
+	}
+}

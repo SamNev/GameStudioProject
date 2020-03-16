@@ -1,0 +1,13 @@
+pullPlayerToEnemy(transform enemy)
+{
+	player = getAttachedPlayer();
+	towardsEnemy = normalize(enemy.pos - player.pos);
+	movePlayer(deltaT * speed * towardsEnemy);
+}
+
+pullEnemyToPlayer(transform enemy)
+{
+	enemyClass = enemy.getAttachedActor();
+	towardsPlayer = normalize(player.pos - enemy.pos);
+	moveEnemyClass(deltaT * speed * towardsPlayer);
+}

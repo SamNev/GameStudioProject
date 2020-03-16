@@ -1,0 +1,168 @@
+class Player
+{
+	boolean isGrounded = true;
+	boolean canTakeInput = true, canMove = true, canJump = true, canAttack = true;
+	boolean sheildSliding = false, ziplining = false;
+
+	float walkingSpeed = 2.5f;
+	float runningSpeed = 4.0f;
+	float AerialSpeed = 2.0f;
+
+	float JumpMultiplier = 5.0f;
+	float ziplineLerp = 0;
+
+	int jumpCounter;
+
+	int weaponComboCounter;
+	float weaponComboTimer;
+
+	enum Weapons
+	{
+		SHIELD
+		SWORD
+		DAGGERS
+		SCYTHE
+		GRAPPLE
+		STAFF
+	}
+
+	Update()
+	{
+		isGrounded = getPlayerGrounded();
+
+		if (isGrounded)
+		{
+			jumpCounter = 0;
+		}
+
+		Vec2 movementDirection = Vec2(InputManager.KeyValue.LeftStickX, InputManager.KeyValue.LeftStickY);
+		
+		if (sheildSliding)
+		{	
+			canTakeInput = true;
+			SheildSliding();
+		}
+		else if (ziplining)
+		{
+			Ziplining();
+		}
+
+		if (canTakeInput)
+		{
+			if (canMove)
+			{
+				if(movementDirection.length())
+				{
+					if (isGrounded)
+					{
+						if (InputManager.KeyDown.Run)
+						{
+							transform.addforce(movementDirection * runningSpeed);	
+						}
+						else
+						{
+							transform.addforce(movementDirection * walkingSpeed);	
+						}
+					}
+					else
+					{
+						transform.addforce(movementDirection * aerialSpeed);	
+					}
+				}
+				if(InputManager.KeyDown.ShieldSlide AND flags.SheildInInventory)
+				{
+					sheildSliding = true;
+					SheildSliding();	
+				}
+				else if(InputManager.KeyDown.Grapple AND flags.GrappleInInventory)
+				{
+					Grapple.GrappleToEnemy();
+				}
+				else if(transform.insideCollisionBoxOfZipline AND flags.ScytheInInventory)
+				{
+					ziplining = true;
+					Ziplining();
+				}
+			}
+			if (canJump)
+			{
+				if(InputManager.KeyDown.Jump)
+				{
+
+					if (sheildSliding)
+					{
+						sheildSliding = false;
+						material.setSlippery(false);	
+					}
+
+					if (jumpCounter == 0)
+					{
+						jumpCounter++;
+						jump();
+					}
+					else if (jumpCounter == 1 AND flags.SwordInInventory)
+					{
+						jumpCounter++;
+						jump();
+					}
+				}
+			}
+			if (canAttack)
+			{
+				attack();
+			}			
+		}
+	}
+
+	void Attack()
+	{
+		if (weapon == SHIELD)
+		{
+			Sheild.attack();			
+		}
+		if (weapon == GRAPPLE)
+		{
+			Grapple.attack();
+		}		
+	}
+
+	void Jump()
+	{
+		transform.addforce(vec3(0, 1, 0) * jumpMultiplier);			
+	}
+
+	void Ziplining()
+	{
+		flaot dAcceleration = 0;
+		
+		dAcceleration = ((TargetZipline.outputSpeed - transfrom.velocity.length) / (2 * (transform.position - TargetZipline.transfrom.position).length)) * deltaTime;
+
+		ziplineLerp += dAcceleration;
+
+		if (ziplineLerp > 1)
+		{
+			ziplining = false;
+		}
+		else
+		{
+			transform = lerp(ActiveZipline.transfom, TargetZipline.transform, ziplineLerp)
+		}
+
+	}
+
+	void SheildSliding()
+	{
+		Vec3 normal = getPolygonNormalBelowPlayer();		
+		float angle = cos^-1(dotProduct(normal, vec3 (0, 1, 0)) / normal.length());
+
+		if (angle > 20)
+		{
+			material.setSlippery(true);
+		}
+		else
+		{
+			sheildSliding = false;
+			material.setSlippery(false);			
+		}
+	}
+}

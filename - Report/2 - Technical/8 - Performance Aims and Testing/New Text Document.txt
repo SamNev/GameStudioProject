@@ -1,0 +1,2 @@
+Performance and Performance Testing plans
+		Steps we can take to make sure it won't just run on lab computers- limit 			particles, ensure we have a plan for testing and framerate logging- we can even 			mention using our own machines to test on less powerful PCs to the uni ones

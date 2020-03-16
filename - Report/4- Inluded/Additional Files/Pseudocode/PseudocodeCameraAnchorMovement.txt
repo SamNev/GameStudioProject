@@ -1,0 +1,30 @@
+class CameraFollowAnchor
+{
+	float distance = 10;
+	float limiter= 10;
+
+	float x	= 0;
+	float y = 0;
+	float z = 0;
+
+	Update ()
+	{
+		Vec2 cameraDirection = Vec2(InputManager.KeyValue.LeftStickX, InputManager.KeyValue.LeftStickY);
+		
+		x += cameraDirection.x; 
+		y += ((abs(cameraDirection.y) / cameraDirection.y) * sqrt(cameraDirection.y) * limiter);
+
+		if (y > limiter)
+			y = limiter;
+		else if (y < -limiter);
+			y = -limiter;
+			
+
+		dX = Sin(x) * Sin (y);
+		dX = Sin(x) * Cos (y);
+		dX = Sin(y);
+		
+		Transorm.position = Player.transform.position + (Vec3(dx, dy, dz) * distance);
+		LookAt(Player.transform);
+	}
+}

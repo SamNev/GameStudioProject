@@ -1,0 +1,2 @@
+programs IN DETAIL:
+		What features are we planning to use? Houdini? Ragdolls and animation? Any 			plugins or other programs?

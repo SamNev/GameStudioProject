@@ -1,0 +1,6 @@
+<BindJump> = "A"
+<BindForward> = "W"
+<BindJumpController> = "BUTTON1"
+<BindAttackController> = "BUTTON2"
+<VolumeMaster> = "50"
+//and so on
